@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: darkred;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.container {
+  background-color: white;
+  width: 80%;
+  max-width: 950px;
+  margin: 20px auto ; 
+  padding: 20px;
+  border-radius: 6px;
+}
+
+h1 {
+  text-align: center;
+  color: darkgreen;
+  margin-top: 0 ;
+}
+
+/* grid layout for the form fields */
+.grid {
+  display: grid ;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px ;
+}
+
+.field {
+  display: flex;
+  flex-direction: column ;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* when you click in box */
+input,
+textarea,
+select {
+  border: 1px solid #ccc;
+  border-radius: 4px ;
+  padding: 8px;
+  font-size: 1rem;
+}
+/* style for boxes */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid darkgreen;
+}
+
+/* spans for the larger fields */
+.span-2 {
+  grid-column: span 2;
+}
+
+.span-3 {
+  grid-column: span 3 ;
+}
+
+/* mailing list + the radio options */
+.options {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #333;
+}
+
+button.submit {
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+button.submit:hover {
+  background-color: green;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #444;
+}
+
+.footer a {
+  color: darkred;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* mobile friendly */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    width: 95%;
+  }
+}
